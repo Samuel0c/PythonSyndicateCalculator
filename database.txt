@@ -1,0 +1,7 @@
+Python Cookbook: Recipes for Mastering Python | Brian K. Jones, FI0101222, 50 & David M. Beazley, FI0202333, 50 | 8
+
+Learn Python the Hard Way | Zed Shaw, FI0102444, 100 | 5
+
+Designing Data-Intensive Applications | Martin Kleppmann, FI0909888, 100 | 7
+
+Secret Colors: A Gentle Introduction to Cryptography | Martin Kleppmann, FI0909888, 45 & Mitch Seymour, FI0505666, 55 | 4
