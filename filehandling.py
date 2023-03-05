@@ -2,6 +2,7 @@
 import re
 import product
 import recipient
+import distribution
 
 def readDatabase(path: str):
     products = []
@@ -21,6 +22,16 @@ def readDatabase(path: str):
                     prod.addRecipient(r, percentage)
                 products.append(prod)
     return products
+
+def writeResults(disr: distribution.Distribution, recipients: set, path: str = "results.txt"):
+    lines = []
+    for r in recipients:
+        line = " | ".join([r.name, r.account, str("%.2f" % disr.pay(r))]) + "\n"
+        lines.append(line)
+    f = open(path, "w")
+    f.writelines(lines)
+    f.write("Development fund | " + str(disr.developmentFundShare))
+    f.close()
 
 
     

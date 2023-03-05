@@ -14,10 +14,9 @@ def main():
 		disr.addProduct(prod, revenue, howManySold)
 		for r in prod.recipients:
 			recipients.add(r)
-	
-	for r in recipients:
-		print(r.name, r.account)
-		print(disr.pay(r))
+
+	filehandling.writeResults(disr, recipients)
+	print("Results written in file results.txt!")
 	
 	 
 if __name__ == "__main__":
