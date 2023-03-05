@@ -9,4 +9,5 @@ class Product:
         self.recipients = {}
 
     def addRecipient(self, recipient: Recipient, percentage: int):
+        """Add recipient to the product with the percentage of contribution."""
         self.recipients[recipient] = percentage

@@ -11,6 +11,7 @@ class Distribution:
         self.fractionToSyndicate = 0.2
 
     def addProduct(self, product: Product, revenue: float, howManySold: int):
+        """Add product to distribution with information about the number of sold product and total revenue obtained from sales."""
         fractionToDevelopmentFund = 0.1
         toDevelopmentFund = fractionToDevelopmentFund * revenue
         self.developmentFundShare += toDevelopmentFund
@@ -39,6 +40,7 @@ class Distribution:
         return pay
     
     def pay(self, recipient: Recipient):
+        """Returns the total pay to a recipient from all products of a syndicate."""
         return self.__payExcludingSyndicate(recipient) + self.__payFromSyndicate(recipient)
 
 

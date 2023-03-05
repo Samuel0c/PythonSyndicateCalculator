@@ -5,6 +5,7 @@ import recipient
 import distribution
 
 def readDatabase(path: str):
+    """Read data from file and return a list of products."""
     products = []
     with open(path, "r") as f:
         for line in f:
@@ -24,6 +25,7 @@ def readDatabase(path: str):
     return products
 
 def writeResults(disr: distribution.Distribution, recipients: set, path: str = "results.txt"):
+    """Write to file how much should be paid to each recipient and how much goes to development fund."""
     lines = []
     for r in recipients:
         line = " | ".join([r.name, r.account, str("%.2f" % disr.pay(r))]) + "\n"
